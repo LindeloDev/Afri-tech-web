@@ -76,8 +76,9 @@ document.addEventListener("DOMContentLoaded", function () {
 const videoModal = document.getElementById("videoModal");
 const videoModalClose = document.getElementById("videoModalClose");
 const productVideo = document.getElementById("productVideo");
-const videoButtons = document.querySelectorAll(".how-it-works-btn");
-
+const videoButtons = document.querySelectorAll(
+    ".how-it-works-btn, .gs-video"
+);
 
 function openVideoModal(videoId) {
 
@@ -214,3 +215,4 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
+

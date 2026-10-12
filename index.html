@@ -105,88 +105,25 @@
         </div>
     </section>
 
-    <section class="companion-section d-none py-2" id="app">
-      <div class="ac-container">
+  <section class="companion-section cm-section">
+    <div class="cm-container">
 
-        <div class="ac-content">
-          <p class="section-eyebrow">
-            <span class="section-eyebrow-dot"></span>
-            AFRITEC COMPANION APP
-          </p>
+      <!-- ===== Left: copy ===== -->
+      <div class="cm-copy">
+        <h2 class="cm-title">Know the moment someone you love needs help.</h2>
 
-          <h2 class="companion-title">
-            Be notified the moment a loved one needs help.
-          </h2>
+        <p class="cm-text">Pair your Afri-Tec device with the Companion App. When someone in your circle sends an alert, you get it instantly, with their location and status.</p>
 
-          <p class="companion-text">
-            Connect your Afri-Tec device to the Companion App and receive instant 
-            alerts, location updates, and important status notifications when a loved 
-            one needs help. Stay informed and connected, wherever you are.
-          </p>
-
-          <div class="store-buttons">
-            <a href="#" class="store-button btn-cta">
-              <img src="assets/images/App-Icons_Apple.png" alt="App Store">
-              <span>
-                <small class="text-white">Download on the</small>
-                <strong class="text-white">App Store</strong>
-              </span>
-            </a>
-            <a href="#" class="store-button btn-cta">
-              <img src="assets/images/App-Icons_Google.png" alt="Google Play Store">
-              <span>
-                <small class="text-white">Download on the</small>
-                <strong class="text-white">Play Store</strong>
-              </span>
-            </a>
-          </div>
-
-          <div class="tracking-note">
-            <span class="tracking-dot"></span>
-            <p>
-              Privacy Notice: Your location is only shared at specific 
-              moments, such as when you open the app, activate a 
-              panic alert, or check in. This keeps the important privacy 
-              information but makes it sound much more professional.
-            </p>
-          </div>
-        </div>
-
-        <div class="ac-phones">
-          <div class="ac-phone">
-            <img src="assets/images/phone.png" alt="" class="ac-phone-frame">
-            <img src="assets/images/app-afritec.webp" alt="" class="ac-phone-screen">
-          </div>
-          <div class="ac-phone">
-            <img src="assets/images/phone.png" alt="" class="ac-phone-frame">
-            <img src="assets/images/map.webp" alt="" class="ac-phone-screen">
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Add once in <head> (skip if already loaded) -->
-  <section class="companion-section" id="app">
-    <div class="ac-container">
-
-      <div class="ac-content">
-        <h2 class="companion-title text-dark">Know the moment someone you love needs help.</h2>
-
-        <p class="companion-text">
-          Pair your Afri-Tec device with the Companion App. When someone in your
-          circle sends an alert, you get it instantly, with their location and status.
-        </p>
-
+        <!-- unchanged: your existing store buttons -->
         <div class="store-buttons">
-          <a href="#" class="store-button btn-cta">
+          <a href="https://apps.apple.com/za/app/afri-tec-alert/id1528506433" class="store-button btn-cta">
             <div class="imge">
               <img src="assets/images/App-Icons_Apple.png" alt="App Store">
             </div>
             <small>Download on the <br>
             <strong>App Store</strong></small>
           </a>
-          <a href="#" class="store-button btn-cta">
+          <a href="https://play.google.com/store/apps/details?id=com.afritec.smartviewalert" class="store-button btn-cta">
             <div class="imge">
               <img src="assets/images/App-Icons_Google.png" alt="Google Play Store">
             </div>
@@ -195,10 +132,10 @@
           </a>
         </div>
 
-        <div class="tracking-note">
-          <h3>Your location stays private</h3>
-          <p>It is only shared when you:</p>
-          <ul>
+        <div class="cm-privacy">
+          <h3 class="cm-privacy-title">Your location stays private</h3>
+          <p class="cm-privacy-text">It is only shared when you:</p>
+          <ul class="cm-pills">
             <li>Open the app</li>
             <li>Trigger a panic alert</li>
             <li>Check in</li>
@@ -206,24 +143,29 @@
         </div>
       </div>
 
-      <!-- Phone is built entirely in CSS: no image files needed -->
-      <div class="ac-phones" aria-hidden="true">
-        <div class="ac-phone">
-          <div class="ac-screen">
-            <div class="ac-map"></div>
-            <div class="ac-pin"></div>
-            <div class="ac-alert">
-              <span class="ac-tag">SOS alert</span>
-              <strong>Thandi needs help</strong>
-              <span class="ac-meta">Sandton, Johannesburg · 1 min ago</span>
-              <div class="ac-row"><i>View location</i><i>Call</i></div>
-            </div>
-          </div>
+      <!-- ===== Right: image =====
+          Photo or screenshot: use as is.
+          Transparent phone PNG: add the class cm-media--contain to the <figure>. -->
+      <figure class="cm-media">
+        <div class="cm-frame">
+          <img src="assets/images/doc.webp" alt="Describe the image here, e.g. a family checking an Afri-Tec alert on a phone" loading="lazy">
         </div>
-      </div>
+
+        <!-- Optional floating alert card. Delete this block if you don't want it. -->
+        <div class="cm-alert" aria-hidden="true">
+          <span class="cm-alert-tag">SOS alert</span>
+          <strong class="cm-alert-title">John needs help</strong>
+          <span class="cm-alert-meta">Sandton, Johannesburg · 1 min ago</span>
+          <span class="cm-alert-row">
+            <span class="cm-alert-btn cm-alert-btn-main">View location</span>
+            <span class="cm-alert-btn">Call</span>
+          </span>
+        </div>
+      </figure>
 
     </div>
   </section>
+
 
     <!-- ============ SOS APP SHOWCASE ============ -->
     <section class="sos-section" id="sos">

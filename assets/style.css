@@ -942,9 +942,10 @@ body.menu-open {
 .about-hero {
   position: relative;
   width: 100%;
-  min-height: 680px;
+  min-height: 100vh;        
+  min-height: 100svh;       
   display: flex;
-  align-items: flex-end;
+  align-items: center;      
   overflow: hidden;
 }
  
@@ -985,7 +986,7 @@ body.menu-open {
   font-size: clamp(2rem, 4.4vw, 3rem);
   line-height: 1.18;
   color: var(--white);
-  margin: 0 0 22px;
+  margin: 190px 0 22px;
 }
  
 .about-hero-text {
@@ -1382,13 +1383,15 @@ body.menu-open {
    PRODUCT HERO
    ========================================================== */
  
+   
 .product-hero {
     position: relative;
-    width: 100%;
-    min-height: 680px;
-    display: flex;
-    align-items: flex-end;
-    overflow: hidden;
+  width: 100%;
+  min-height: 100vh;        /* was 680px */
+  min-height: 100svh;       /* phones: ignores the browser address bar */
+  display: flex;
+  align-items: center;      /* centres the content; use flex-end to keep it at the bottom */
+  overflow: hidden;
 }
  
 .product-hero-bg {
@@ -1427,7 +1430,7 @@ body.menu-open {
   font-size: clamp(1.7rem, 3.6vw, 2.4rem);
   line-height: 1.2;
   color: var(--white);
-  margin: 0 0 20px;
+  margin: 404px 0 20px;
 }
  
 .product-hero-divider {
@@ -2199,6 +2202,61 @@ body.menu-open {
   .contact-section{ 
     padding: 64px 16px; 
   }
+
+  /* ==========================================================
+   CONTACT SECTION: soft shadows instead of black borders
+   Paste at the END of your stylesheet (after Bootstrap and
+   your existing .contact-* rules). Everything is scoped to
+   .contact-section, so no other page is affected.
+   ========================================================== */
+
+/* Slightly darker backdrop so the white cards lift off it */
+.contact-section.bg-light {
+  background-color: #F1F3F5 !important;
+}
+
+/* ---------- Cards: no border, soft depth ---------- */
+.contact-section .contact-card,
+.contact-section .follow-card {
+  border: 0;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow:
+    0 1px 2px #0a0d120f,
+    0 12px 28px -12px #0a0d122d;
+}
+
+/* ---------- Inputs: inner shadow instead of a border ---------- */
+.contact-section .form-control {
+  border: 0;
+  border-radius: 10px;
+  background: #F4F6F8;
+  box-shadow: inset 0 1px 3px #0a0d1229;
+  transition: background .2s ease, box-shadow .2s ease;
+}
+
+.contact-section .form-control:focus {
+  border: 0;
+  background: #fff;
+  box-shadow:
+    inset 0 1px 3px #0a0d121a,
+    0 0 0 3px #e84c1f47;   /* orange focus ring, keeps keyboard focus visible */
+}
+
+/* ---------- Dividers: faint hairline instead of solid black ---------- */
+.contact-section .detail-row {
+  border-bottom: 1px solid #0a0d121a;
+}
+
+.contact-section .detail-row:last-child {
+  border-bottom: 0;
+}
+
+/* ---------- Submit button: drop the dark outline ---------- */
+.contact-section .btn-submit,
+.contact-section .btn-submit:hover {
+  border: 0;
+}
  
   .contact-heading{
     text-decoration-color: var(--ink);
@@ -2225,7 +2283,6 @@ body.menu-open {
   }
  
   .card-subtext{
-    color: var(--muted);
     font-size: .85rem;
     text-align: center;
   }
@@ -3336,7 +3393,7 @@ body.menu-open {
   margin: 0;
   font-size: .8rem;
   line-height: 1.3;
-  color: rgba(255, 255, 255, .8);
+  color: #ffffffcc;
   opacity: 1;                             /* cancels old opacity: .75 */
 }
 
@@ -3455,7 +3512,7 @@ body.menu-open {
   margin: 0 0 18px;
   font-size: 1.1rem;
   line-height: 1.65;
-  color: rgba(255, 255, 255, .92);
+  color: #ffffffe8;
 }
 
 .cc-copy .cc-closing {
@@ -3482,7 +3539,7 @@ body.menu-open {
   aspect-ratio: 1;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 106, 61, .6) 0%, rgba(255, 106, 61, 0) 68%);
+  background: radial-gradient(circle, #ff6a3d99 0%, #ff6a3d00 68%);
 }
 
 .cc-ring {
@@ -3511,7 +3568,7 @@ body.menu-open {
   display: block;
   width: min(280px, 72%);
   height: auto;
-  filter: drop-shadow(0 32px 40px rgba(60, 10, 0, .45));
+  filter: drop-shadow(0 32px 40px #3c0a0073);
 }
 
 /* ---------- Floating chips ---------- */
@@ -3779,9 +3836,13 @@ body.menu-open {
 
 /* Step 4 is the one that matters: SOS orange with a soft ring */
 .gs-step-final .gs-num {
-  background: var(--accent-teal, #e84c1f);
+  background:  #e6303f;
   box-shadow: 0 0 0 8px #e84c1f29;
   font-weight: 700;
+}
+
+.stepp {
+  background: var(--accent-teal, #e84c1f);
 }
 
 /* ---------- Tablet ---------- */

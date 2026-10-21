@@ -26,8 +26,8 @@
             <a href="index.html" class="brand">
                 <img src="assets/images/tec-logo.png" alt="Afri-Tec Technologies Logo" class="brand-logo">
                 <span class="brand-text">
-                    <span class="brand-name">AFRI-<span class="brand-name-accent">Tec</span></span>
-                    <span class="brand-tagline">Technologies</span>
+                    <span class="brand-name text-white">AFRI-<span class="brand-name-accent">Tec</span></span>
+                    <span class="brand-tagline text-white">Technologies</span>
                 </span>
             </a>
 
@@ -38,7 +38,27 @@
             <li><a href="contact.html">Contact Us</a></li>
             </ul>
 
-            <a href="contact.html" class="btn-pill btn-cta d-none d-lg-inline-flex">SOS</a>
+            <div class="dropdown d-none d-lg-inline-flex">
+            <button class="btn-pill btn-cta" type="button"
+                    id="sosMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                SOS
+            </button>
+
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="sosMenu">
+                <li>
+                <a class="dropdown-item" href="https://apps.apple.com/za/app/afri-tec-alert/id1528506433"
+                    target="_blank" rel="noopener">
+                    App Store
+                </a>
+                </li>
+                <li>
+                <a class="dropdown-item" href="https://play.google.com/store/apps/details?id=com.afritec.smartviewalert"
+                    target="_blank" rel="noopener">
+                    Google Play
+                </a>
+                </li>
+            </ul>
+        </div>
 
             <button class="hamburger d-lg-none" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
             <span></span>
@@ -62,7 +82,23 @@
             <li style="--i:3"><a href="product.html">Product</a></li>
             <li style="--i:4"><a href="contact.html">Contact Us</a></li>
         </ul>
-        <a href="contact.html" class="btn-pill btn-cta btn-pill btn-cta-mobile" style="--i:5">SOS</a>
+        <div class="dropdown d-lg-none" style="--i:5">
+            <button class="btn-pill btn-cta btn-cta-mobile" type="button"
+                    id="sosMenuMobile" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+            SOS
+            </button>
+
+            <ul class="dropdown-menu" aria-labelledby="sosMenuMobile">
+            <li>
+                <a class="dropdown-item" href="https://apps.apple.com/za/app/afri-tec-alert/id1528506433"
+                target="_blank" rel="noopener">App Store</a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="https://play.google.com/store/apps/details?id=com.afritec.smartviewalert"
+                target="_blank" rel="noopener">Google Play</a>
+            </li>
+            </ul>
+        </div>
     </div>
 
     <main>
@@ -409,7 +445,7 @@
                 <div class="cc-grid">
 
                 <div class="cc-copy">
-                    <h2 class="cc-title">Your Command Centre for Every Emergency</h2>
+                    <h2 class="cc-title justify-content-cen">Your <span class="cc-red">Command</span> Center <span class="cc-red">for Every </span> Emergency</h2>
 
                     <p>The Afri-Tec SOS app connects you, your device, and the people you trust. It's where your emergency contacts are stored, alerts are sent from, and your location is shared the moment something goes wrong so help is never more than a press away.</p>
 
@@ -673,6 +709,7 @@ technology.</p>
         <p class="footer-bottom">&copy; <span id="footerYear">2026</span> Afri-Tec Technologies. All rights reserved.</p>
     </footer>
 
-<script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -6,13 +6,12 @@
   --surface: #11161D;
   --text: #070707;
   --text-muted: #8B94A0;
-  --accent-teal: #e84c1f;
+  --accent-teal: #03a190;
   --accent-blue: #4C6FFF;
   --accent-blue-hover: #6C87FF;
   --accent-violet: #8B5CF6;
-  --accent-amber: #FFB020;
   --accent-gradient: linear-gradient(135deg, var(--accent-teal) 0%, var(--accent-blue) 55%, var(--accent-violet) 100%);
-  --white: #FFFFFF;
+  --white: #FFF;
   --border: #ffffff14;
   --header-scrolled-bg: #0a0d12d1;
   --shadow-cta: 0 8px 24px -8px #4c6fff8c;
@@ -28,7 +27,7 @@
   --font-display: "Inter", sans-serif;
   --font-body: "Inter", sans-serif;
   --nav-height: 76px;
-  --light-bg: #FFFFFF;
+  --light-bg: #FFF;
   --light-text: #0A0D12;
   --light-text-muted: #59636D;
   --light-border: #D9DEE3;
@@ -43,13 +42,14 @@
   --hero-overlay-2: #0a0d12d1;
   --hero-overlay-3: #0a0d1280;
   --hero-overlay-4: #0a0d12b3;
-  --shadow-device-2: 0 25px 35px #000000;
+  --shadow-device-2: 0 25px 35px #000;
   --footer-bg: #000;
   --footer-text: #F4F6F8;
   --footer-text-muted: #B7C4D1;
-  --footer-divider: #e84c1f;
-  --about-overlay: #0b0a0ac2;
+  --footer-divider: #fff;
+  --about-overlay: #3939399b;
   --about-divider: #ffffff26;
+  --cards: #b7ebd3;
   --card-gap: 10px;
   --product-overlay-1: #05070a26;
   --product-overlay-2: #0507108c;
@@ -163,8 +163,8 @@ button {
 
 .brand-logo {
   display: block;
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
   filter: drop-shadow(0 0 10px #1fe8b84d);
   transition: transform 0.3s ease, filter 0.3s ease;
@@ -184,9 +184,9 @@ button {
 .brand-name {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1.18rem;
+  font-size: 1.4rem;
   letter-spacing: -0.01em;
-  color: #fff;
+  color: #000;
   white-space: nowrap;
 }
 
@@ -209,7 +209,7 @@ button {
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: #171717;
   margin-top: 2px;
   white-space: nowrap;
 }
@@ -771,17 +771,20 @@ body.menu-open {
 .sos-section {
   position: relative;
   width: 100%;
-  min-height: 640px;
+  height: 100%;
+  min-height: 680px;
+  bottom: 20px;
   display: flex;
   align-items: center;
   overflow: hidden;
 }
 
 .sos-bg {
+  height: 100%;
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image:url('images/afri.jpg');
+  background-image:url('images/sosa.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -837,8 +840,8 @@ body.menu-open {
  
 .site-footer {
   width: 100%;
-  background: var(--footer-bg);
-  color: var(--footer-text);
+  background: #838789;
+  color: #000;
   padding: 64px 24px 32px;
 }
  
@@ -861,7 +864,7 @@ body.menu-open {
 .footer-tagline {
   font-size: 0.92rem;
   line-height: 1.6;
-  color: var(--footer-text);
+  color: #000;
   max-width: 280px;
   margin: 0 0 20px;
 }
@@ -875,14 +878,14 @@ body.menu-open {
   margin: 0;
   font-size: 0.9rem;
   line-height: 1.5;
-  color: var(--footer-text);
+  color: #000;
 }
- 
+
 .footer-heading {
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 1.05rem;
-  color: var(--footer-text);
+  color: #000;
   margin: 0 0 20px;
 }
  
@@ -894,7 +897,7 @@ body.menu-open {
  
 .footer-links a {
   font-size: 0.94rem;
-  color: var(--footer-text);
+  color: #000;
   transition: color 0.2s ease;
 }
  
@@ -906,6 +909,7 @@ body.menu-open {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  color: #000;
 }
  
 .footer-contact li {
@@ -913,7 +917,7 @@ body.menu-open {
   align-items: center;
   gap: 10px;
   font-size: 0.94rem;
-  color: var(--footer-text);
+  color: #000;
 }
  
 .footer-contact svg {
@@ -932,7 +936,7 @@ body.menu-open {
   margin: 0;
   text-align: center;
   font-size: 0.85rem;
-  color: var(--footer-text-muted);
+  color: #1a1a1a;
 }
  
 /* ==========================================================
@@ -1080,7 +1084,6 @@ body.menu-open {
 .about-details-text p {
   font-size: 0.86rem;
   line-height: 1.7;
-  color: var(--light-text-muted);
   margin: 0 0 16px;
 }
  
@@ -2412,7 +2415,7 @@ body.menu-open {
   }
 
   .brand-name {
-    font-size: 1.02rem;
+    font-size: 1.4rem;
   }
 
   .hero-media-frame {
@@ -3315,7 +3318,7 @@ body.menu-open {
 
 /* ---------- Button ---------- */
 .companion-section .store-buttons .store-button {
-  --accent: #198754;                      
+  --accent: #62c6d1;                      
   display: flex;
   flex-direction: column;                
   align-items: center;
@@ -3332,21 +3335,21 @@ body.menu-open {
   background: #0f2e30;
   border: 3px solid #0b1f20;
   border-radius: 28px;
-  box-shadow: 6px 6px 0 #0d6efd;    
+  box-shadow: 6px 6px 0 var(--cards);    
   transform: rotate(-2deg);
   transition: transform .2s cubic-bezier(.34, 1.56, .64, 1),
               box-shadow .2s ease;
 }
 
 .companion-section .store-buttons .store-button:nth-child(2) {
-  --accent: #9d1a08;                      /* playful pink */
+  --accent: #62c6d1;                      /* playful pink */
   transform: rotate(2deg);
 }
 
 /* ---------- Hover / keyboard focus ---------- */
 .companion-section .store-buttons .store-button:hover,
 .companion-section .store-buttons .store-button:focus-visible {
-  background: #0f2e30;
+  background: #62c6d1;
   color: #fff;
   transform: rotate(0deg) translateY(-6px) scale(1.04);
   box-shadow: 10px 12px 0 var(--accent);
@@ -3472,7 +3475,7 @@ body.menu-open {
    ========================================================== */
 
 .cc-section {
-  --cc-panel: #c8340f;           /* deep flame: white text passes AA contrast */
+  --cc-panel: #eb3609;           /* deep flame: white text passes AA contrast */
   --cc-ring: #ff6a3d;            /* lighter flame for the radiating rings */
   position: relative;
   overflow: hidden;
@@ -3624,7 +3627,7 @@ body.menu-open {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c8340f' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center / 13px no-repeat;
+  background: var(--accent-teal) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c8340f' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center / 13px no-repeat;
 }
 
 /* ---------- Tablet ---------- */
@@ -4103,7 +4106,7 @@ body.menu-open {
   position: absolute;
   inset: 9% -6% -6% 11%;
   border-radius: 32px;
-  background: #0d6efd;
+  background: var(--cards);
 }
 
 .cm-frame {
@@ -4245,4 +4248,33 @@ body.menu-open {
     text-align: center;
     width: 100%;
   }
+}
+
+@media (max-width: 991.98px) {
+  .dropdown.d-lg-none {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dropdown.d-lg-none .btn-cta-mobile {
+    font-size: 1.25rem !important;
+    padding: 1rem 3rem !important;
+    min-width: 240px;
+    border-radius: 9px;
+  }
+
+  .dropdown.d-lg-none .dropdown-menu {
+    min-width: 240px;
+  }
+
+  .dropdown.d-lg-none .dropdown-item {
+    font-size: 1.1rem;
+    padding: .8rem 1rem;
+    text-align: center;
+  }
+}
+
+.cc-red{
+  color: #000;
 }
